@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+//import * as React from 'react'
+/*import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
@@ -32,4 +32,36 @@ function App() {
   )
 }
 
-export default App
+export default App */
+//an array of objects
+const todoList = [
+  {
+    id: "1",
+    title: "Complete Assignment"
+  },
+  {
+    id: "2",
+    title: "Play Chess"
+  },
+  {
+    id: "3",
+    title: "Cold Bath"
+  }
+];
+
+function todo() {
+return (
+  <div>
+    <h1>Todo List</h1>
+    <ul>
+      {todoList.map(function activities(item) {
+
+      return <li key="idProperty">{item.title}</li>;
+    })}
+    </ul>
+  </div>
+  
+);
+}
+
+export default todo;
